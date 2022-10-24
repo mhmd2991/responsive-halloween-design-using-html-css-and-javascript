@@ -323,7 +323,7 @@ header .container .menu .navbar-right li a {
 /*Start About Section*/
 .about::before,
 .gallery::before,
-.about .container .artist-part::before,
+.artist-part::before,
 .testimonials::before,
 .ticket::before,
 .invitation::before,
@@ -775,6 +775,30 @@ header .container .menu .navbar-right li a {
 }
 
 /*End Footer Section*/
+/*Start Loader Section*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: linear-gradient(to top, #6e0270 0%, #2c0047 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.loader .container img {
+    width: 35rem;
+}
+
+.loader.fade-out {
+    top: 110%;
+    opacity: 0;
+}
 
 /*Responsive*/
 
