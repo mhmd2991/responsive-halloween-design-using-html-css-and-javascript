@@ -38,3 +38,14 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+//Loader Function
+function loader() {
+    document.querySelector('.loader').classList.add('fade-out');
+}
+
+function fadeOut() {
+    setInterval(loader, 5000);
+}
+
+window.onload = fadeOut();
