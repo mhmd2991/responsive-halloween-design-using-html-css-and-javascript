@@ -1,1 +1,1057 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+:root {
+    --yellowColor: #f7ea66;
+    --whiteColor: #ffffff;
+    --violetColor: #7f479a;
+    --darkViolet: #2c0047;
+    --grayColor: #cccccc;
+    --ffOne: 'Open Sans', sans-serif;
+    --ffTwo: 'Berkshire Swash';
+}
+
+body {
+    font-family: var(--ffOne);
+    background: url(../img/body-img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-weight: 400;
+}
+
+/*General Style*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ffTwo);
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--whiteColor);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 3.2rem;
+    position: relative;
+    color: var(--yellowColor);
+    line-height: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.social {
+    display: block;
+    border: .1rem solid var(--yellowColor);
+    color: var(--yellowColor);
+    font-size: 1.6rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    line-height: 3.6rem;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.social:hover {
+    background-color: var(--yellowColor);
+    color: var(--violetColor);
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    color: var(--violetColor);
+    font-family: var(--ffTwo);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    border-radius: 3.5rem;
+    background-color: var(--yellowColor);
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    box-shadow: 0rem 0rem 4rem .4rem rgb(249 220 4 / 30%);
+}
+
+@media(min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*Start Header Section*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 8.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.1rem;
+    background-color: var(--darkViolet);
+    z-index: 9999;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+}
+
+header .container .logo img {
+    height: 5rem;
+}
+
+header .container .toggle-btn {
+    cursor: pointer;
+}
+
+header .container .toggle-btn span {
+    display: block;
+    width: 2.2rem;
+    height: .2rem;
+    border-radius: .1rem;
+    background-color: var(--yellowColor);
+}
+
+header .container .toggle-btn span:nth-child(2) {
+    margin-top: .4rem;
+    width: 1.8rem;
+}
+
+header .container .toggle-btn span:last-child {
+    margin-top: .4rem;
+    width: 1rem;
+}
+
+header .container .menu {
+    position: absolute;
+    width: 100%;
+    top: -80rem;
+    left: 0;
+    padding: 1.5rem;
+    background-color: var(--darkViolet);
+    z-index: -1;
+    transition: all .3s linear;
+}
+
+header .container .menu.active {
+    top: 8rem;
+}
+
+header .container .menu .navbar-left {
+    display: flex;
+    flex-direction: column;
+}
+
+header .container .menu .navbar-left li {
+    margin: 1rem 0;
+}
+
+header .container .menu .navbar-left li a {
+    position: relative;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    color: var(--whiteColor);
+    font-family: var(--ffTwo);
+    text-transform: capitalize;
+}
+
+header .container .menu .navbar-right li a {
+    width: 14.5rem;
+    height: 4.5rem;
+    padding: 1rem;
+}
+
+/*End Header Section*/
+/*Start Home Section*/
+.home {
+    background-color: var(--darkViolet);
+    padding-top: 8.2rem;
+    z-index: 99;
+}
+
+.home .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 8.2rem);
+}
+
+.home .container .row .banner-img {
+    display: none;
+}
+
+.home .container .row .home-text {
+    text-align: center;
+    width: 100%;
+}
+
+.home .container .row .home-text h2 {
+    font-size: 2rem;
+    color: var(--whiteColor);
+    font-family: var(--ffTwo);
+    line-height: 2.4rem;
+}
+
+.home .container .row .home-text h5 {
+    font-size: 3.5rem;
+    margin: 2.5rem 0 2.7rem;
+    padding-left: .7rem;
+}
+
+.home .container .row .home-text p {
+    width: 31.5rem;
+    max-width: 100%;
+    padding: 0 0 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home .container .row .home-text .btn-bar,
+.ticket .container .row .ticket-box .ticket-img .ticket-inner .btn-ticket {
+    text-align: center;
+}
+
+.home .container .row .home-text .btn-bar a {
+    padding: 1.2rem;
+    width: 15.5rem;
+    height: 4.8rem;
+}
+
+/*End Home Section*/
+/*Start About Section*/
+.about::before,
+.gallery::before,
+.about .container .artist-part::before,
+.testimonials::before,
+.ticket::before,
+.invitation::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -21.5rem;
+    left: 41%;
+    background: url(../img/title-spider.png) no-repeat;
+    z-index: 0;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 27%;
+    left: -33.1rem;
+    top: 0;
+    background: url(../img/about-spider-wev-image.png) no-repeat;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about .container .row {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.about .container .row h2 {
+    z-index: 9;
+}
+
+.about .container .row .about-text p {
+    width: 30.8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about .container .row .about-text .btn-bar {
+    text-align: center;
+}
+
+.about .container .row .about-text .btn-bar a {
+    padding: 1.2rem;
+    width: 15.5rem;
+    height: 4.8rem;
+}
+
+.about .container .artist-part {
+    margin-top: 6rem;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
+}
+
+.about .container .artist-part::before {
+    height: 24%;
+    top: -26.5rem;
+}
+
+.about .container .artist-part::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 320%;
+    top: -88rem;
+    left: 25%;
+    background: url(../img/Skull.jpg) no-repeat;
+    z-index: -13;
+}
+
+.about .container .artist-part>h2 {
+    font-size: 2.8rem;
+}
+
+.about .container .artist-part .artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .container .artist-part .artist-container .artist .artist-text h2 {
+    font-size: 2.4rem;
+    color: var(--whiteColor);
+    margin-bottom: .8rem;
+}
+
+.about .container .artist-part .artist-container .artist .artist-text h3 {
+    font-size: 1.6rem;
+    color: var(--whiteColor);
+    margin-bottom: 2rem;
+}
+
+.about .container .artist-part .artist-container .artist .artist-text p {
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.about .container .artist-part .artist-container .artist .artist-text ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*End About Section*/
+/*Start Gallery Section*/
+.gallery {
+    padding-top: 0;
+    background: url(../img/gallery-background-image.jpg) no-repeat;
+}
+
+.gallery .container>h2 {
+    padding-top: 6.5rem;
+}
+
+.gallery .container>h2,
+.testimonials .container>h2,
+.ticket .container>h2,
+.invitation .container>h2,
+.contact .container>h2 {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.gallery .container .row .gallery-box {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery .container .row .gallery-box .gallery-img h2 {
+    font-size: 2rem;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.gallery .container .row .gallery-box .gallery-img h5 {
+    font-size: 1.4rem;
+    color: var(--whiteColor);
+    padding-left: 1.5rem;
+}
+
+.gallery .container .row .gallery-box .gallery-img .gallery-overlay {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery .container .row .gallery-box .gallery-img .gallery-overlay .overlay {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0 0 0 / .6);
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.gallery .container .row .gallery-box .gallery-img .gallery-overlay:hover .overlay {
+    height: 100%;
+}
+
+.gallery .row .gallery-box .gallery-img .gallery-overlay .overlay .gallery-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+
+.gallery .row .gallery-box .gallery-img .gallery-overlay .overlay .gallery-icon ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+/*End Gallery Section*/
+/*Start Testimonial Section*/
+.testimonials {
+    padding-bottom: 6rem;
+}
+
+.testimonials .container .row .testimonial {
+    position: relative;
+}
+
+.testimonials .container .row .testimonial::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 175%;
+    top: -7rem;
+    left: -5%;
+    background: url(../img/Scratch.png) no-repeat;
+    z-index: -1;
+}
+
+.testimonials .container .row .testimonial .testimonial-img {
+    text-align: center;
+}
+
+.testimonials .container .row .testimonial .testimonial-img img {
+    max-width: 100%;
+    width: auto;
+}
+
+.testimonials .container .row .testimonial .testimonial-info {
+    text-align: center;
+}
+
+.testimonials .container .row .testimonial .testimonial-info h2 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+.testimonials .container .row .testimonial .testimonial-info h3 {
+    font-size: 1.6rem;
+    color: var(--whiteColor);
+    margin-bottom: 2rem;
+}
+
+.testimonials .container .row .testimonial .testimonial-info p {
+    margin-bottom: 1.5rem;
+}
+
+/*End Testimonial Section*/
+/*Start Ticket Section*/
+.ticket {
+    background: url(../img/get-ticket-background-image.jpg) no-repeat;
+}
+
+.ticket .container .row .ticket-box .ticket-img {
+    position: relative;
+    margin-bottom: 3rem;
+    border: 0.05rem solid transparent;
+    transition: all .5s ease;
+}
+
+.ticket .container .row .ticket-box .ticket-img:hover {
+    border-color: var(--yellowColor);
+}
+
+.ticket .container .row .ticket-box .ticket-img img {
+    height: 37rem;
+    object-fit: cover;
+}
+
+.ticket .container .row .ticket-box .ticket-img .ticket-inner {
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.ticket .container .row .ticket-box .ticket-img .ticket-inner h2 {
+    font-size: 2rem;
+    color: var(--yellowColor);
+    line-height: 2.4rem;
+    margin-bottom: .5rem;
+}
+
+.ticket .container .row .ticket-box .ticket-img .ticket-inner h5 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--whiteColor);
+    margin: 3rem 0 4rem;
+    line-height: 2.4rem;
+}
+
+.ticket .container .row .ticket-box .ticket-img .ticket-inner ul li {
+    font-family: var(--ffTwo);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-transform: capitalize;
+    margin: 1.5rem 0;
+    color: var(--whiteColor);
+}
+
+.ticket .container .row .ticket-box .ticket-img .ticket-inner .btn-ticket a {
+    width: 12rem;
+    height: 4rem;
+    padding: .7rem;
+}
+
+/*End Ticket Section*/
+/*Start Invitation Section*/
+.invitation .container .row,
+.contact .container .row {
+    position: relative;
+    z-index: 9;
+}
+
+.invitation .container .row form .form-group input,
+.invitation .container .row form .form-group select {
+    position: relative;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    border: 0.05rem solid var(--whiteColor);
+    font-family: var(--ffTwo);
+    font-size: 1.4rem;
+    background: transparent;
+    padding-left: 1rem;
+    width: 100%;
+    height: 3rem;
+    color: var(--yellowColor);
+    outline: none;
+}
+
+.invitation .container .row form .form-group input::placeholder {
+    color: var(--grayColor);
+}
+
+.invitation .container .row form .form-group input:focus {
+    border-color: var(--yellowColor);
+}
+
+.invitation .container .row form .form-group input:focus::placeholder {
+    opacity: 0;
+}
+
+.invitation .container .row form .form-group select {
+    color: var(--grayColor);
+}
+
+.invitation .container .row form .form-group select option {
+    color: #222;
+}
+
+.invitation .container .row .btn-bar {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.invitation .container .row .btn-bar a {
+    width: 15.5rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+}
+
+/*End Invitation Section*/
+/*Start Contact Section*/
+.contact {
+    background-color: var(--darkViolet);
+    padding-top: 6rem;
+    position: relative;
+}
+
+.contact .container .row form {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .container .row form .form-group {
+    display: flex;
+    align-items: center;
+    border: 0.05rem solid var(--grayColor);
+    border-radius: 5rem;
+    width: 25.5rem;
+    height: 4rem;
+}
+
+.contact .container .row form .form-group input {
+    width: 100%;
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: capitalize;
+    color: var(--grayColor);
+    font-family: "Berkshire Swash";
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 9;
+}
+
+.contact .container .row form .form-group input:focus {
+    border-color: var(--yellowColor);
+}
+
+.contact .container .row form .form-group input:focus::placeholder {
+    opacity: 0;
+}
+
+.contact .container .row form .form-group button {
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    border-radius: 0 2.5rem 2.5rem 0;
+    padding: .8rem 1.1rem;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.contact .container .row .social-media {
+    position: relative;
+}
+
+.contact .container .row .social-media h6 {
+    font-size: 2rem;
+    color: var(--grayColor);
+    padding: 2rem 0;
+    line-height: 2.4rem;
+    font-weight: 400;
+}
+
+.contact .container .row .social-media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    margin-bottom: 5rem;
+}
+
+/*End Contact Section*/
+/*Start Footer Section*/
+.footer {
+    background-color: var(--darkViolet);
+    padding: 2rem 0;
+    border-top: 0.03rem solid #6c4d7f;
+    z-index: -9;
+}
+
+.footer .container {
+    position: relative;
+    text-align: center;
+}
+
+.footer .container p {
+    color: var(--yellowColor);
+    font-size: 1.2rem;
+}
+
+/*End Footer Section*/
+
+/*Responsive*/
+
+@media(min-width: 576px) {
+    .home .container .row .home-text h5 {
+        font-size: 6rem;
+        margin: 2.5rem 0 5rem;
+        padding-left: 3.5rem;
+    }
+
+    .home .container .row .home-text p {
+        width: 49rem
+    }
+
+    .contact .container .row form .form-group input {
+        width: 36rem;
+    }
+}
+
+@media(min-width: 768px) {
+    header {
+        padding-bottom: 1rem;
+    }
+
+    header .container .toggle-btn {
+        display: none;
+    }
+
+    header .container .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        width: auto;
+        top: 0 !important;
+        padding: 0;
+        z-index: 1;
+    }
+
+    header .container .menu .navbar-left {
+        flex-direction: row;
+    }
+
+    header .container .menu .navbar-left li {
+        margin: 0 0 0 1.5rem;
+        position: relative;
+    }
+
+    header .container .menu .navbar-left li a {
+        padding: 0 .5rem;
+        font-size: 1.4rem;
+    }
+
+    header .container .menu .navbar-left li a::after,
+    header .container .menu .navbar-left li a.active::after {
+        content: "";
+        position: absolute;
+        background-color: #613157;
+        width: 117%;
+        height: 0;
+        top: -3.6rem;
+        left: -.5rem;
+        z-index: 1;
+        transition: all .5s ease;
+    }
+
+    header .container .menu .navbar-left li a::before,
+    header .container .menu .navbar-left li a.active::before {
+        content: "";
+        position: absolute;
+        background-color: #552f4d;
+        opacity: .7;
+        width: 117%;
+        height: 0;
+        top: -3.6rem;
+        left: -.5rem;
+        z-index: -9;
+        transition: all .5s ease;
+    }
+
+    header .container .menu .navbar-left li a:hover::before,
+    header .container .menu .navbar-left li a.active::before {
+        height: 8.7rem;
+    }
+
+    header .container .menu .navbar-left li a:hover::after,
+    header .container .menu .navbar-left li a.active::after {
+        height: 1rem;
+    }
+
+    header .container .menu .navbar-right {
+        margin-left: auto;
+    }
+
+    header .container .menu .navbar-right li a {
+        font-size: 1.8rem;
+        padding: .8rem 1.2rem;
+        width: 13.5rem;
+        height: 4.2rem;
+    }
+
+    .home .container .row {
+        position: relative;
+        height: 52rem;
+    }
+
+    .home .container .row .banner-img {
+        display: block;
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    .home .container .row .banner-img img {
+        height: auto;
+        margin-bottom: -.3rem;
+    }
+
+    .home .container .row .home-text {
+        width: auto;
+    }
+
+    .home .container .row .home-text h5 {
+        font-size: 4rem;
+        margin: 2.5rem 0 4rem;
+    }
+
+    .home .container .row .home-text p {
+        width: 36rem;
+    }
+
+    .about::before,
+    .gallery::before,
+    .testimonials::before,
+    .ticket::before,
+    .invitation::before,
+    .contact::before {
+        left: 48%;
+        top: -21.4rem;
+    }
+
+    .about::after {
+        left: -26.5rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about .container .artist-part::before {
+        height: 100%;
+        left: 45%;
+    }
+
+    .about .container .artist-part::after {
+        height: 288%;
+        left: 50%;
+        top: -67rem;
+    }
+
+    .about .container .row .about-text p {
+        width: 66.5rem;
+    }
+
+    .about .container .artist-part .artist-container {
+        flex-direction: row;
+    }
+
+    .about .container .artist-part .artist-container .artist .artist-text p {
+        width: 56%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery .container>h2,
+    .ticket .container>h2,
+    .invitation .container>h2,
+    .contact .container>h2 {
+        font-size: 3.2rem;
+    }
+
+    .gallery .container .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
+
+    .gallery .container .row .gallery-box {
+        text-align: left;
+    }
+
+    .testimonials .container .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+        gap: 5%;
+    }
+
+
+    .testimonials .container .row .testimonial .testimonial-img,
+    .testimonials .container .row .testimonial .testimonial-info {
+        text-align: left;
+    }
+
+    .testimonials .container .row .testimonial .testimonial-info p {
+        width: 33rem;
+    }
+
+    .ticket .container .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        gap: 2rem;
+    }
+
+    .invitation .container .row form {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .invitation .container .row form .form-group {
+        flex: 0 0 50%;
+    }
+
+    .contact::after {
+        content: "";
+        position: absolute;
+        background: url(../img/fox-background-image.png) no-repeat;
+        width: 100%;
+        height: 230%;
+        bottom: -6.5rem;
+        left: 32%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    .contact .container .row form .form-group {
+        width: 34.6rem;
+    }
+
+}
+
+@media(min-width: 992px) {
+    header .container .menu .navbar-left {
+        margin-left: auto;
+    }
+
+    header .container .menu .navbar-left li a {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+
+    header .container .menu .navbar-right li a {
+        width: 14.5rem;
+        height: 5rem;
+        padding: 1.2rem;
+        font-size: 2rem;
+    }
+
+    .home .container .row {
+        height: 58rem;
+    }
+
+    .home .container .row .home-text h5 {
+        font-size: 6rem;
+        padding-left: 3.5rem;
+    }
+
+    .home .container .row .home-text p {
+        width: 49rem;
+    }
+
+    .about .container .artist-part::before {
+        left: 47%;
+    }
+
+    .about .container .artist-part::after {
+        left: 54%;
+        top: -88rem;
+        height: 420%;
+    }
+
+    .about .container .artist-part .artist-container .artist {
+        display: flex;
+    }
+
+    .about .container .artist-part .artist-container .artist .artist-img,
+    .about .container .artist-part .artist-container .artist .artist-text {
+        flex-basis: 50%;
+    }
+
+    .about .container .artist-part .artist-container .artist .artist-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about .container .artist-part .artist-container .artist .artist-text p {
+        width: 33rem;
+        text-align: left;
+    }
+
+    .testimonials .container .row .testimonial {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact .container .row form .form-group {
+        width: 47rem;
+    }
+
+    .contact::after {
+        left: 37%;
+    }
+}
