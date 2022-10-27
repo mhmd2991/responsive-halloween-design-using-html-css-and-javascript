@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -18,15 +18,15 @@ html {
     --darkViolet: #2c0047;
     --grayColor: #cccccc;
     --ffOne: 'Open Sans', sans-serif;
-    --ffTwo: 'Berkshire Swash';
+    --ffTwo: 'Berkshire Swash', cursive;
 }
 
 body {
     font-family: var(--ffOne);
+    font-weight: 400;
     background: url(../img/body-img.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    font-weight: 400;
 }
 
 /*General Style*/
@@ -89,14 +89,6 @@ section {
     color: var(--violetColor);
 }
 
-.container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
 .btn {
     position: relative;
     display: inline-block;
@@ -112,7 +104,15 @@ section {
 }
 
 .btn:hover {
-    box-shadow: 0rem 0rem 4rem .4rem rgb(249 220 4 / 30%);
+    box-shadow: 0 0 4rem .4rem rgba(249 220 4 / 30%);
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 @media(min-width: 576px) {
@@ -151,11 +151,11 @@ section {
     border-radius: 50%;
     background-color: var(--yellowColor);
     box-shadow: 0 0 .5rem rgba(0 0 0 / .5);
+    cursor: pointer;
+    z-index: 999;
     visibility: hidden;
     opacity: 0;
-    cursor: pointer;
     transition: all 1.5s ease-in-out;
-    z-index: 999;
 }
 
 .to-top img {
@@ -172,7 +172,7 @@ section {
 header {
     position: fixed;
     width: 100%;
-    height: 8.2rem;
+    height: 8.1rem;
     padding-top: 1rem;
     padding-bottom: 1.1rem;
     background-color: var(--darkViolet);
@@ -193,6 +193,8 @@ header .container .logo {
 
 header .container .logo img {
     height: 5rem;
+    width: auto;
+    max-width: 100%;
 }
 
 header .container .toggle-btn {
@@ -290,7 +292,6 @@ header .container .menu .navbar-right li a {
 .home .container .row .home-text h2 {
     font-size: 2rem;
     color: var(--whiteColor);
-    font-family: var(--ffTwo);
     line-height: 2.4rem;
 }
 
@@ -308,9 +309,8 @@ header .container .menu .navbar-right li a {
     margin-right: auto;
 }
 
-.home .container .row .home-text .btn-bar,
-.ticket .container .row .ticket-box .ticket-img .ticket-inner .btn-ticket {
-    text-align: center;
+.home .container .row .home-text .btn-bar {
+    text-align: ceneter;
 }
 
 .home .container .row .home-text .btn-bar a {
@@ -321,9 +321,9 @@ header .container .menu .navbar-right li a {
 
 /*End Home Section*/
 /*Start About Section*/
-.about::before,
-.gallery::before,
+.about .container::before,
 .artist-part::before,
+.gallery::before,
 .testimonials::before,
 .ticket::before,
 .invitation::before,
@@ -351,6 +351,10 @@ header .container .menu .navbar-right li a {
 .about .container {
     position: relative;
     z-index: 1;
+}
+
+.about .container::before {
+    top: -27.5rem;
 }
 
 .about .container .row {
@@ -453,6 +457,7 @@ header .container .menu .navbar-right li a {
 .ticket .container>h2,
 .invitation .container>h2,
 .contact .container>h2 {
+    padding-top: 6.5rem;
     text-align: center;
     font-size: 2.8rem;
 }
@@ -484,8 +489,8 @@ header .container .menu .navbar-right li a {
     position: absolute;
     width: 100%;
     height: 0;
-    left: 0;
     top: 0;
+    left: 0;
     background-color: rgba(0 0 0 / .6);
     overflow: hidden;
     transition: all .5s ease;
@@ -503,11 +508,8 @@ header .container .menu .navbar-right li a {
     margin-right: 1.5rem;
 }
 
-.gallery .row .gallery-box .gallery-img .gallery-overlay .overlay .gallery-icon ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: .5rem;
+.gallery .row .gallery-box .gallery-img .gallery-overlay .overlay .gallery-icon ul li {
+    margin-bottom: .5rem;
 }
 
 /*End Gallery Section*/
@@ -608,8 +610,8 @@ header .container .menu .navbar-right li a {
 .ticket .container .row .ticket-box .ticket-img .ticket-inner ul li {
     font-family: var(--ffTwo);
     font-size: 1.4rem;
-    line-height: 2.4rem;
     text-transform: capitalize;
+    line-height: 2.4rem;
     margin: 1.5rem 0;
     color: var(--whiteColor);
 }
@@ -633,6 +635,7 @@ header .container .menu .navbar-right li a {
     position: relative;
     margin-bottom: 1rem;
     text-transform: capitalize;
+    outline: none;
     border: 0.05rem solid var(--whiteColor);
     font-family: var(--ffTwo);
     font-size: 1.4rem;
@@ -641,7 +644,6 @@ header .container .menu .navbar-right li a {
     width: 100%;
     height: 3rem;
     color: var(--yellowColor);
-    outline: none;
 }
 
 .invitation .container .row form .form-group input::placeholder {
@@ -661,7 +663,7 @@ header .container .menu .navbar-right li a {
 }
 
 .invitation .container .row form .form-group select option {
-    color: #222;
+    color: #222
 }
 
 .invitation .container .row .btn-bar {
@@ -709,15 +711,11 @@ header .container .menu .navbar-right li a {
     position: relative;
     text-transform: capitalize;
     color: var(--grayColor);
-    font-family: "Berkshire Swash";
+    font-family: var(--ffTwo);
     background: transparent;
     outline: none;
     border: none;
     z-index: 9;
-}
-
-.contact .container .row form .form-group input:focus {
-    border-color: var(--yellowColor);
 }
 
 .contact .container .row form .form-group input:focus::placeholder {
@@ -732,7 +730,7 @@ header .container .menu .navbar-right li a {
     padding: .8rem 1.1rem;
     margin-left: auto;
     cursor: pointer;
-    z-index: 99;
+    z-index: 9;
 }
 
 .contact .container .row .social-media {
@@ -800,8 +798,8 @@ header .container .menu .navbar-right li a {
     opacity: 0;
 }
 
+/*End Loader Section*/
 /*Responsive*/
-
 @media(min-width: 576px) {
     .home .container .row .home-text h5 {
         font-size: 6rem;
@@ -810,11 +808,7 @@ header .container .menu .navbar-right li a {
     }
 
     .home .container .row .home-text p {
-        width: 49rem
-    }
-
-    .contact .container .row form .form-group input {
-        width: 36rem;
+        width: 49rem;
     }
 }
 
@@ -929,7 +923,7 @@ header .container .menu .navbar-right li a {
         width: 36rem;
     }
 
-    .about::before,
+    .about .container::before,
     .gallery::before,
     .testimonials::before,
     .ticket::before,
@@ -937,6 +931,10 @@ header .container .menu .navbar-right li a {
     .contact::before {
         left: 48%;
         top: -21.4rem;
+    }
+
+    .about .container::before {
+        top: -27.4rem;
     }
 
     .about::after {
@@ -992,7 +990,6 @@ header .container .menu .navbar-right li a {
         gap: 5%;
     }
 
-
     .testimonials .container .row .testimonial .testimonial-img,
     .testimonials .container .row .testimonial .testimonial-info {
         text-align: left;
@@ -1032,7 +1029,6 @@ header .container .menu .navbar-right li a {
     .contact .container .row form .form-group {
         width: 34.6rem;
     }
-
 }
 
 @media(min-width: 992px) {
@@ -1043,13 +1039,6 @@ header .container .menu .navbar-right li a {
     header .container .menu .navbar-left li a {
         font-size: 1.6rem;
         padding: 0 1rem;
-    }
-
-    header .container .menu .navbar-right li a {
-        width: 14.5rem;
-        height: 5rem;
-        padding: 1.2rem;
-        font-size: 2rem;
     }
 
     .home .container .row {
